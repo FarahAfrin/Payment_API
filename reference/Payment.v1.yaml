@@ -92,28 +92,6 @@ paths:
         Http Method : POST
       tags:
         - Customer
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            examples:
-              example-2: {}
-          application/xml:
-            schema:
-              type: object
-              properties: {}
-          application/javascript:
-            schema:
-              type: object
-              properties: {}
-          multipart/form-data:
-            schema:
-              type: object
-              properties: {}
-        description: |
-          Json list of customers
       parameters:
         - schema:
             type: string
@@ -150,6 +128,13 @@ paths:
           in: query
           name: ApplicationToken
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: Json list of customers
     parameters: []
 components:
   schemas: {}
