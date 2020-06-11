@@ -157,6 +157,8 @@ paths:
       description: |-
         This method is used to set the keys of payment gateways in the api. Set the keys before every
         call of any method.
+      tags:
+        - Set Keys
   /GetAuthorizationCode:
     parameters: []
     post:
