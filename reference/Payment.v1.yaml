@@ -240,6 +240,152 @@ paths:
           in: query
           name: ApplicationToken
           required: true
+  /CreateCustomer:
+    post:
+      summary: Create Customer
+      operationId: post-CreateCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    customerID: 3386QC83KGY1FDYDRRWTVDNDVM
+      description: Create customer
+      tags:
+        - Customers
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: CustomerName
+          description: Customer name
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: AddressLine1
+          description: Address
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: AdministrativeDistrictLevel1
+          required: true
+          description: |-
+            Two letter state code formatted
+            according to ISO3166-1 alpha-2.
+        - schema:
+            type: string
+          in: query
+          name: Locality
+          description: Locality name
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: PostalCode
+          description: Postal Code
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: CompanyName
+          description: Name of the customer’s company
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: EmailAddress
+          description: Email address of customer
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: FamilyName
+          description: Family Name
+        - schema:
+            type: string
+          in: query
+          name: Nickname
+          description: Nick Name
+        - schema:
+            type: string
+          in: query
+          name: PhoneNumber
+          description: Customer Phone Number
+        - schema:
+            type: string
+          in: query
+          name: ReferenceId
+          required: true
+          description: |-
+            Any reference id to uniquely identify the
+            customer I.e. CustomerID
+        - schema:
+            type: string
+          in: query
+          name: Note
+          description: Any Note
+        - schema:
+            type: string
+          in: query
+          name: Country
+          description: |-
+            Two letter country code formatted
+            according to ISO3166-1 alpha-2.
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: Website
+          description: Website of customer
+        - schema:
+            type: string
+          in: query
+          name: MerchantToken
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: ApplicationToken
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  paymentGateway: Square
+                  CustomerName: abc
+                  AddressLine1: 1881 yonge street
+                  AdministrativeDistrictLevel1: ''
+                  Locality: toronto
+                  PostalCode: M5E 1E5
+                  CompanyName: string
+                  EmailAddress: abc@gmail.com
+                  FamilyName: string
+                  Nickname: string
+                  PhoneNumber: string
+                  ReferenceId: ReferenceId
+                  Note: ''
+                  Country: Canada
+                  Website: www.test.com
+                  MerchantToken: MerchantToken
+                  ApplicationToken: ApplicationToken
 components:
   schemas: {}
   securitySchemes:
