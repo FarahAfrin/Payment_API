@@ -92,8 +92,6 @@ paths:
       description: |-
         List all the saved customers .
         Http Method : POST
-      tags:
-        - Customer
       parameters:
         - schema:
             type: string
