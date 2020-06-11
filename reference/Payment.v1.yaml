@@ -14,7 +14,7 @@ servers:
 paths:
   '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}/{ReferenceId}/{Note}/{Country}':
     post:
-      summary: ''
+      summary: Create Customer
       operationId: post-customer
       responses:
         '200':
