@@ -12,7 +12,7 @@ servers:
   - url: 'http://payment.walliitools.com/Payment'
     description: prod
 paths:
-  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}/{ReferenceId}/{Note}/{Country}':
+  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}/{ReferenceId}/{Note}/{Country}/{Website}':
     post:
       summary: Create Customer
       operationId: post-customer
@@ -117,7 +117,13 @@ paths:
         name: Country
         in: path
         required: true
-  '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}/{MerchantToken}/{ApplicationToken}':
+      - schema:
+          type: string
+        name: Website
+        in: path
+        required: true
+        description: Website of customer
+  '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}':
     post:
       summary: List Customer
       operationId: ListCustomer
@@ -158,16 +164,6 @@ paths:
         in: path
         required: true
         description: DESC/ASC
-      - schema:
-          type: string
-        name: MerchantToken
-        in: path
-        required: true
-      - schema:
-          type: string
-        name: ApplicationToken
-        in: path
-        required: true
 components:
   schemas: {}
   securitySchemes:
