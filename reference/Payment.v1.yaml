@@ -137,6 +137,7 @@ paths:
           description: |-
             Name of payment gateway (i.e Square,
             Braintree)
+          required: true
         - schema:
             type: string
           in: query
@@ -158,10 +159,12 @@ paths:
             type: string
           in: query
           name: MerchantToken
+          required: true
         - schema:
             type: string
           in: query
           name: ApplicationToken
+          required: true
     parameters: []
 components:
   schemas: {}
