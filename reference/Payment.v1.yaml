@@ -160,5 +160,15 @@ paths:
 components:
   schemas: {}
   securitySchemes:
-    API Key - 1:
+    GetAuthorizationCode:
       type: oauth2
+      flows:
+        authorizationCode:
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: {}
+          authorizationUrl: 'http://PaymentAPIsURL/Payment/GetAuthorizationCode'
+      description: |-
+        This method is used to redirect to payment gateway Oauth authorize window for getting
+        authorization token. Also, authorization token is sent to this method to be used in web
+        api.
