@@ -196,7 +196,14 @@ paths:
               type: object
               properties: {}
             examples:
-              example-1: {}
+              example-1:
+                value:
+                  paymentGateway: Square
+                  cursor: null
+                  sortField: null
+                  sortOrder: null
+                  MerchantToken: TestProject1234$
+                  ApplicationToken: 7b0c2c08-5008-42b9-adf8-b9c4b0609a6c
         description: Json list of customers
     parameters: []
 components:
