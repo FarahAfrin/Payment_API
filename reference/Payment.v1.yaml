@@ -143,8 +143,8 @@ paths:
                   cursor: null
                   sortField: null
                   sortOrder: null
-                  MerchantToken: TestProject1234$
-                  ApplicationToken: 7b0c2c08-5008-42b9-adf8-b9c4b0609a6c
+                  MerchantToken: string
+                  ApplicationToken: string
         description: Json list of customers
     parameters: []
   /SetKeys:
@@ -157,6 +157,54 @@ paths:
       description: |-
         This method is used to set the keys of payment gateways in the api. Set the keys before every
         call of any method.
+  /GetAuthorizationCode:
+    parameters: []
+    post:
+      summary: ''
+      operationId: postGetAuthorizationCode
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                No Response: {}
+      description: 'This method is used to redirect to payment gateway Oauth authorize window for getting authorization token. Also, authorization token is sent to this method to be used in web api'
+      tags:
+        - Authorize
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: code
+          description: |-
+            Authorization code sent by payment
+            gateway
+            (Required if code is to be set)
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: |-
+            Name of payment gateway (i.e Square,
+            SumUp)
+            (Required if method is called to redirect to
+            payment gateway authorize window)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  code: ''
+                  paymentGateway: Square
+        description: ''
 components:
   schemas: {}
   securitySchemes:
