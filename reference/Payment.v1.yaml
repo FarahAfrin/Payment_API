@@ -12,65 +12,6 @@ servers:
   - url: 'http://payment.walliitools.com/Payment'
     description: prod
 paths:
-  '/CreateCustomer/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}':
-    post:
-      summary: Create Customer
-      operationId: post-customer
-      responses:
-        '200':
-          description: OK
-      description: ''
-      tags:
-        - Customer
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-    parameters:
-      - schema:
-          type: string
-        name: Locality
-        in: path
-        required: true
-        description: Locality name
-      - schema:
-          type: string
-        name: PostalCode
-        in: path
-        required: true
-        description: Postal Code
-      - schema:
-          type: string
-        name: CompanyName
-        in: path
-        required: true
-        description: Company Name
-      - schema:
-          type: string
-        name: EmailAddress
-        in: path
-        required: true
-        description: Email Address of Customer
-      - schema:
-          type: string
-        name: FamilyName
-        in: path
-        required: true
-        description: Family Name
-      - schema:
-          type: string
-        name: Nickname
-        in: path
-        required: true
-        description: Nick Name Of Customer
-      - schema:
-          type: string
-        name: PhoneNumber
-        in: path
-        required: true
-        description: Customer Phone Number
   /ListCustomer:
     post:
       summary: List Customer
@@ -207,57 +148,15 @@ paths:
         description: Json list of customers
     parameters: []
   /SetKeys:
-    get:
-      summary: Set Keys
-      tags:
-        - Set Keys
-      responses: {}
-      operationId: get-SetKeys
-      description: This method is used to set the keys of payment gateways in the api. Set the keys before every call of any method.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-        description: No response
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: SquareAccessToken
-        - schema:
-            type: string
-          in: query
-          name: SquareClientID
-        - schema:
-            type: string
-          in: query
-          name: SquareClientSecret
-        - schema:
-            type: string
-          in: query
-          name: SumupClientID
-        - schema:
-            type: string
-          in: query
-          name: SumupClientSecret
-        - schema:
-            type: string
-          in: query
-          name: BraintreeMerchantId
-        - schema:
-            type: string
-          in: query
-          name: BraintreePublicKey
-        - schema:
-            type: string
-          in: query
-          name: BraintreePrivateKey
-        - schema:
-            type: string
-          in: query
-          name: BraintreeTokenizationKey
+    post:
+      summary: ''
+      operationId: post-SetKeys
+      responses:
+        '200':
+          description: OK
+      description: |-
+        This method is used to set the keys of payment gateways in the api. Set the keys before every
+        call of any method.
 components:
   schemas: {}
   securitySchemes: {}
