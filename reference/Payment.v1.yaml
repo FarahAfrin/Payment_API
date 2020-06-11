@@ -159,4 +159,6 @@ paths:
         call of any method.
 components:
   schemas: {}
-  securitySchemes: {}
+  securitySchemes:
+    API Key - 1:
+      type: oauth2
