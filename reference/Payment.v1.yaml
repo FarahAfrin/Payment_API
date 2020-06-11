@@ -6,11 +6,7 @@ info:
     These are the API for the (version =?)
     This API is a standard REST-style API that accepts /returns JSON requests and is located at :
     http://payment.walliitools.com/
-  contact:
-    name: Farah
-    email: farahafrinhimu@gmail.com
-    url: 'http://payment.walliitools.com'
-  termsOfService: 'http://payment.walliitools.com/Home'
+  contact: {}
   license:
     name: CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
     url: 'https://openweathermap.org/price'
@@ -124,10 +120,12 @@ paths:
   '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}/{MerchantToken}/{ApplicationToken}':
     post:
       summary: ''
-      operationId: post-ListCustomer
+      operationId: ListCustomer
       responses:
         '200':
           description: OK
+        '201':
+          description: Created
     parameters:
       - schema:
           type: string
