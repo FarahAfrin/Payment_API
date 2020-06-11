@@ -12,7 +12,7 @@ servers:
   - url: 'http://payment.walliitools.com/Payment'
     description: prod
 paths:
-  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}/{ReferenceId}/{Note}/{Country}/{Website}':
+  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}':
     post:
       summary: Create Customer
       operationId: post-customer
@@ -91,39 +91,14 @@ paths:
         name: Nickname
         in: path
         required: true
-        description: Nick name
+        description: Nick Name Of Customer
       - schema:
           type: string
         name: PhoneNumber
         in: path
         required: true
-        description: Phone Number
-      - schema:
-          type: string
-        name: ReferenceId
-        in: path
-        required: true
-        description: |-
-          Any reference id to uniquely identify the
-          customer I.e. CustomerID
-      - schema:
-          type: string
-        name: Note
-        in: path
-        required: true
-        description: Note
-      - schema:
-          type: string
-        name: Country
-        in: path
-        required: true
-      - schema:
-          type: string
-        name: Website
-        in: path
-        required: true
-        description: Website of customer
-  '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}':
+        description: Customer Phone Number
+  /ListCustomer:
     post:
       summary: List Customer
       operationId: ListCustomer
@@ -154,39 +129,33 @@ paths:
             examples:
               example-2: {}
         description: |
-          "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
-          "MerchantToken":”string”,
-          "ApplicationToken": “string”
-      parameters: []
-    parameters:
-      - schema:
-          type: string
-        name: paymentGateway
-        in: path
-        required: true
-        description: |-
-          Name of payment gateway (i.e Square,
-          Braintree)
-      - schema:
-          type: string
-        name: cursor
-        in: path
-        required: true
-        description: |-
-          Pagination page no. Returned by payment
-          gateway
-      - schema:
-          type: string
-        name: sortField
-        in: path
-        required: true
-        description: DEFAULT/CREATED_AT
-      - schema:
-          type: string
-        name: sortOrder
-        in: path
-        required: true
-        description: DESC/ASC
+          Json list of customers
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: |-
+            Name of payment gateway (i.e Square,
+            Braintree)
+        - schema:
+            type: string
+          in: query
+          name: cursor
+          description: |-
+            (Pagination page no. Returned by payment
+            gateway)
+        - schema:
+            type: string
+          in: query
+          name: sortField
+          description: DEFAULT/CREATED_AT
+        - schema:
+            type: string
+          in: query
+          name: sortOrder
+          description: DESC/ASC
+    parameters: []
 components:
   schemas: {}
   securitySchemes:
