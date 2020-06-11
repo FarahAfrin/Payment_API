@@ -12,7 +12,7 @@ servers:
   - url: 'http://payment.walliitools.com/Payment'
     description: prod
 paths:
-  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}':
+  '/CreateCustomer/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}':
     post:
       summary: Create Customer
       operationId: post-customer
@@ -22,40 +22,13 @@ paths:
       description: ''
       tags:
         - Customer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
     parameters:
-      - schema:
-          type: string
-        name: paymentGateway
-        in: path
-        required: true
-        description: |
-          Name of payment gateway (i.e Square,
-          SumUp, Braintree)
-          (Required)
-      - schema:
-          type: string
-        name: CustomerName
-        in: path
-        required: true
-        description: |-
-          Customer name
-          (Required)
-      - schema:
-          type: string
-        name: AddressLine1
-        in: path
-        required: true
-        description: |-
-          Address
-          (Required)
-      - schema:
-          type: string
-        name: AdministrativeDistrictLevel1
-        in: path
-        required: true
-        description: |-
-          Two letter state code formatted
-          according to ISO3166-1 alpha-2.
       - schema:
           type: string
         name: Locality
@@ -127,6 +100,18 @@ paths:
               properties: {}
             examples:
               example-2: {}
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+          application/javascript:
+            schema:
+              type: object
+              properties: {}
+          multipart/form-data:
+            schema:
+              type: object
+              properties: {}
         description: |
           Json list of customers
       parameters:
