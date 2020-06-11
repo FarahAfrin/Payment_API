@@ -31,14 +31,13 @@ paths:
       operationId: postGetAuthorizationCode
       responses:
         '200':
-          description: OK
+          description: Sucess
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
-              examples:
-                No Response: {}
+              examples: {}
       description: 'This method is used to redirect to payment gateway Oauth authorize window for getting authorization token. Also, authorization token is sent to this method to be used in web api'
       tags:
         - Authorize
