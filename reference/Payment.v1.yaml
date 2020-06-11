@@ -117,7 +117,6 @@ paths:
       description: |-
         List all the saved customers .
         Http Method : POST
-        Uri : http://PaymentAPIsURL/Payment/ListCustomers
       tags:
         - Customer
       requestBody:
@@ -155,6 +154,14 @@ paths:
           in: query
           name: sortOrder
           description: DESC/ASC
+        - schema:
+            type: string
+          in: query
+          name: MerchantToken
+        - schema:
+            type: string
+          in: query
+          name: ApplicationToken
     parameters: []
 components:
   schemas: {}
