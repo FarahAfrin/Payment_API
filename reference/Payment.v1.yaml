@@ -24,6 +24,43 @@ paths:
         call of any method.
       tags:
         - Set Keys
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: SquareAccessToken
+        - schema:
+            type: string
+          in: query
+          name: SquareClientID
+        - schema:
+            type: string
+          in: query
+          name: SquareClientSecret
+        - schema:
+            type: string
+          in: query
+          name: SumupClientID
+        - schema:
+            type: string
+          in: query
+          name: SumupClientSecret
+        - schema:
+            type: string
+          in: query
+          name: BraintreeMerchantId
+        - schema:
+            type: string
+          in: query
+          name: BraintreePublicKey
+        - schema:
+            type: string
+          in: query
+          name: BraintreePrivateKey
+        - schema:
+            type: string
+          in: query
+          name: BraintreeTokenizationKey
   /GetAuthorizationCode:
     parameters: []
     post:
