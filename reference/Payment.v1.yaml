@@ -150,12 +150,7 @@ paths:
           "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
           "MerchantToken":”string”,
           "ApplicationToken": “string”
-      parameters:
-        - schema:
-            type: string
-          in: header
-          name: paymentGateway
-          description: 'Name of payment gateway (i.e Square,SumUp)'
+      parameters: []
     parameters:
       - schema:
           type: string
