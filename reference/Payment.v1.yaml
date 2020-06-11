@@ -145,6 +145,12 @@ paths:
             schema:
               type: object
               properties: {}
+            examples:
+              example-1: {}
+        description: |
+          "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
+          "MerchantToken":”string”,
+          "ApplicationToken": “string”
     parameters:
       - schema:
           type: string
