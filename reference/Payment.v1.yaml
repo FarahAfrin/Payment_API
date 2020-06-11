@@ -78,15 +78,76 @@ paths:
       responses:
         '200':
           description: OK
-        '201':
-          description: Created
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
               examples:
-                example-1: {}
+                example-1:
+                  value:
+                    errors: null
+                    customers:
+                      - id: KFKFRBVVN0ZB56Q90BGZ8DESJW
+                        created_at: '2020-06-07T12:47:49.926Z'
+                        updated_at: '2020-06-07T12:47:50Z'
+                        cards:
+                          - id: 'ccof:WZngFGfUsqNtg6Zj4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 2
+                            exp_year: 2023
+                            cardholder_name: farah
+                            billing_address:
+                              address_line_1: '825 Eighth Avenue, New York'
+                              address_line_2: '1860 McOrmond drive '
+                              address_line_3: null
+                              locality: ontario
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: ca
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: zz
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: farah
+                        family_name: fg
+                        nickname: fa
+                        company_name: test
+                        email_address: apitest@hidata.com
+                        address:
+                          address_line_1: '1860 McOrmond drive '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: Manhattan
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: S7S 0A5
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: f123
+                        note: test
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: X8APPS177BVHY.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                    cursor: null
       description: |-
         List all the saved customers .
         Http Method : POST
@@ -134,6 +195,8 @@ paths:
             schema:
               type: object
               properties: {}
+            examples:
+              example-1: {}
         description: Json list of customers
     parameters: []
 components:
