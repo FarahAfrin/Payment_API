@@ -117,7 +117,7 @@ paths:
         required: true
   '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}/{MerchantToken}/{ApplicationToken}':
     post:
-      summary: ''
+      summary: List Customer
       operationId: ListCustomer
       responses:
         '200':
