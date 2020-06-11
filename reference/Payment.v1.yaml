@@ -20,6 +20,8 @@ paths:
         '200':
           description: OK
       description: ''
+      tags:
+        - Customer
     parameters:
       - schema:
           type: string
@@ -124,6 +126,9 @@ paths:
           description: OK
         '201':
           description: Created
+      description: ''
+      tags:
+        - Customer
     parameters:
       - schema:
           type: string
