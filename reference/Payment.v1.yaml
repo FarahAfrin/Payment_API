@@ -132,6 +132,13 @@ paths:
           description: OK
         '201':
           description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1: {}
       description: |-
         List all the saved customers .
         Http Method : POST
@@ -145,12 +152,30 @@ paths:
               type: object
               properties: {}
             examples:
-              example-1: {}
+              '"paymentGateway":””, // Name of payment gateway (i.e Square,SumUp) "MerchantToken":”string”, "ApplicationToken": “string”': {}
+              example-2: {}
         description: |
           "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
           "MerchantToken":”string”,
           "ApplicationToken": “string”
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: 'Name of payment gateway (i.e Square,SumUp)'
+        - schema:
+            type: string
+          in: query
+          name: cursor
+        - schema:
+            type: string
+          in: query
+          name: sortField
+        - schema:
+            type: string
+          in: query
+          name: sortOrder
     parameters:
       - schema:
           type: string
