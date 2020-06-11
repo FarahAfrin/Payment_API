@@ -160,10 +160,7 @@ paths:
 components:
   schemas: {}
   securitySchemes:
-    GetAuthorizationCode:
-      type: openIdConnect
-      openIdConnectUrl: 'http://PaymentAPIsURL/Payment/GetAuthorizationCode'
-      description: |-
-        This method is used to redirect to payment gateway Oauth authorize window for getting
-        authorization token. Also, authorization token is sent to this method to be used in web
-        api
+    'Application Token, Merchant Token':
+      type: http
+      scheme: basic
+      description: "Unless otherwise noted all calls to the API use HTTP basic authorization over HTTPS.\nUse MerchantToken and ApplicationToken of the willitools payments  environment as the basic developer for each api as parameter except SetKeys .\n\nApplication Token: is a secret word that we issue to a developer. The APIs check the token to authenticate the developer and provide/deny access to the APIs. If we revoke the token at the server, then the developer will have no access\n \nMerchant Token: is a secret word that we issue to a merchant. The APIs check the token to authenticate the merchant and provide/deny access to the APIs. If we revoke the token at the server, then the merchnat will have no access\n\n"
