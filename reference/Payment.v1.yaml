@@ -152,30 +152,12 @@ paths:
               type: object
               properties: {}
             examples:
-              '"paymentGateway":””, // Name of payment gateway (i.e Square,SumUp) "MerchantToken":”string”, "ApplicationToken": “string”': {}
               example-2: {}
         description: |
           "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
           "MerchantToken":”string”,
           "ApplicationToken": “string”
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: paymentGateway
-          description: 'Name of payment gateway (i.e Square,SumUp)'
-        - schema:
-            type: string
-          in: query
-          name: cursor
-        - schema:
-            type: string
-          in: query
-          name: sortField
-        - schema:
-            type: string
-          in: query
-          name: sortOrder
+      parameters: []
     parameters:
       - schema:
           type: string
