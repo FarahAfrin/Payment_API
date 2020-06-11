@@ -133,10 +133,9 @@ paths:
         '201':
           description: Created
       description: |-
-        List all the saved customers
+        List all the saved customers .
         Http Method : POST
         Uri : http://PaymentAPIsURL/Payment/ListCustomers
-        REQUEST BODY SCHEMA: APPLICATION/JSON
       tags:
         - Customer
       requestBody:
@@ -151,6 +150,12 @@ paths:
           "paymentGateway":””, // Name of payment gateway (i.e Square,SumUp)
           "MerchantToken":”string”,
           "ApplicationToken": “string”
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: paymentGateway
+          description: 'Name of payment gateway (i.e Square,SumUp)'
     parameters:
       - schema:
           type: string
