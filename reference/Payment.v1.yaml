@@ -15,9 +15,158 @@ info:
     name: CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
     url: 'https://openweathermap.org/price'
 servers:
-  - url: 'http://payment.walliitools.com/Payment/'
+  - url: 'http://payment.walliitools.com/Payment'
     description: prod
-paths: {}
+paths:
+  '/CreateCustomer/{paymentGateway}/{CustomerName}/{AddressLine1}/{AdministrativeDistrictLevel1}/{Locality}/{PostalCode}/{CompanyName}/{EmailAddress}/{FamilyName}/{Nickname}/{PhoneNumber}/{ReferenceId}/{Note}/{Country}':
+    post:
+      summary: ''
+      operationId: post-customer
+      responses:
+        '200':
+          description: OK
+      description: ''
+    parameters:
+      - schema:
+          type: string
+        name: paymentGateway
+        in: path
+        required: true
+        description: |
+          Name of payment gateway (i.e Square,
+          SumUp, Braintree)
+          (Required)
+      - schema:
+          type: string
+        name: CustomerName
+        in: path
+        required: true
+        description: |-
+          Customer name
+          (Required)
+      - schema:
+          type: string
+        name: AddressLine1
+        in: path
+        required: true
+        description: |-
+          Address
+          (Required)
+      - schema:
+          type: string
+        name: AdministrativeDistrictLevel1
+        in: path
+        required: true
+        description: |-
+          Two letter state code formatted
+          according to ISO3166-1 alpha-2.
+      - schema:
+          type: string
+        name: Locality
+        in: path
+        required: true
+        description: Locality name
+      - schema:
+          type: string
+        name: PostalCode
+        in: path
+        required: true
+        description: Postal Code
+      - schema:
+          type: string
+        name: CompanyName
+        in: path
+        required: true
+        description: Company Name
+      - schema:
+          type: string
+        name: EmailAddress
+        in: path
+        required: true
+        description: Email Address of Customer
+      - schema:
+          type: string
+        name: FamilyName
+        in: path
+        required: true
+        description: Family Name
+      - schema:
+          type: string
+        name: Nickname
+        in: path
+        required: true
+        description: Nick name
+      - schema:
+          type: string
+        name: PhoneNumber
+        in: path
+        required: true
+        description: Phone Number
+      - schema:
+          type: string
+        name: ReferenceId
+        in: path
+        required: true
+        description: |-
+          Any reference id to uniquely identify the
+          customer I.e. CustomerID
+      - schema:
+          type: string
+        name: Note
+        in: path
+        required: true
+        description: Note
+      - schema:
+          type: string
+        name: Country
+        in: path
+        required: true
+  '/ListCustomer/{paymentGateway}/{cursor}/{sortField}/{sortOrder}/{MerchantToken}/{ApplicationToken}':
+    post:
+      summary: ''
+      operationId: post-ListCustomer
+      responses:
+        '200':
+          description: OK
+    parameters:
+      - schema:
+          type: string
+        name: paymentGateway
+        in: path
+        required: true
+        description: |-
+          Name of payment gateway (i.e Square,
+          Braintree)
+      - schema:
+          type: string
+        name: cursor
+        in: path
+        required: true
+        description: |-
+          Pagination page no. Returned by payment
+          gateway
+      - schema:
+          type: string
+        name: sortField
+        in: path
+        required: true
+        description: DEFAULT/CREATED_AT
+      - schema:
+          type: string
+        name: sortOrder
+        in: path
+        required: true
+        description: DESC/ASC
+      - schema:
+          type: string
+        name: MerchantToken
+        in: path
+        required: true
+      - schema:
+          type: string
+        name: ApplicationToken
+        in: path
+        required: true
 components:
   schemas: {}
   securitySchemes:
