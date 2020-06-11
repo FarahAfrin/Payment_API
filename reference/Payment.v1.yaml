@@ -12,10 +12,70 @@ servers:
   - url: 'http://payment.walliitools.com/Payment'
     description: prod
 paths:
-  /ListCustomer:
+  /SetKeys:
     post:
-      summary: List Customer
-      operationId: ListCustomer
+      summary: Set Keys
+      operationId: post-SetKeys
+      responses:
+        '200':
+          description: OK
+      description: |-
+        This method is used to set the keys of payment gateways in the api. Set the keys before every
+        call of any method.
+      tags:
+        - Set Keys
+  /GetAuthorizationCode:
+    parameters: []
+    post:
+      summary: Get Authorization Code
+      operationId: postGetAuthorizationCode
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                No Response: {}
+      description: 'This method is used to redirect to payment gateway Oauth authorize window for getting authorization token. Also, authorization token is sent to this method to be used in web api'
+      tags:
+        - Authorize
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: code
+          description: |-
+            Authorization code sent by payment
+            gateway
+            (Required if code is to be set)
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: |-
+            Name of payment gateway (i.e Square,
+            SumUp)
+            (Required if method is called to redirect to
+            payment gateway authorize window)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  code: ''
+                  paymentGateway: Square
+        description: ''
+  /ListCustomers:
+    post:
+      summary: List Customers
+      operationId: post-ListCustomers
       responses:
         '200':
           description: OK
@@ -89,9 +149,25 @@ paths:
                             name: Cards on File
                         creation_source: THIRD_PARTY
                     cursor: null
-      description: |-
-        List all the saved customers .
-        Http Method : POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  paymentGateway: Square
+                  cursor: null
+                  sortField: null
+                  sortOrder: null
+                  MerchantToken: string
+                  ApplicationToken: string
+        description: ''
+      tags:
+        - Customers
+      description: List all the saved customers
       parameters:
         - schema:
             type: string
@@ -106,8 +182,8 @@ paths:
           in: query
           name: cursor
           description: |-
-            (Pagination page no. Returned by payment
-            gateway)
+            Pagination page no. Returned by payment
+            gateway
         - schema:
             type: string
           in: query
@@ -128,83 +204,6 @@ paths:
           in: query
           name: ApplicationToken
           required: true
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            examples:
-              example-1:
-                value:
-                  paymentGateway: Square
-                  cursor: null
-                  sortField: null
-                  sortOrder: null
-                  MerchantToken: string
-                  ApplicationToken: string
-        description: Json list of customers .
-    parameters: []
-  /SetKeys:
-    post:
-      summary: Set Keys
-      operationId: post-SetKeys
-      responses:
-        '200':
-          description: OK
-      description: |-
-        This method is used to set the keys of payment gateways in the api. Set the keys before every
-        call of any method.
-      tags:
-        - Set Keys
-  /GetAuthorizationCode:
-    parameters: []
-    post:
-      summary: Get Authorization Code
-      operationId: postGetAuthorizationCode
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-              examples:
-                No Response: {}
-      description: 'This method is used to redirect to payment gateway Oauth authorize window for getting authorization token. Also, authorization token is sent to this method to be used in web api'
-      tags:
-        - Authorize
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: code
-          description: |-
-            Authorization code sent by payment
-            gateway
-            (Required if code is to be set)
-        - schema:
-            type: string
-          in: query
-          name: paymentGateway
-          description: |-
-            Name of payment gateway (i.e Square,
-            SumUp)
-            (Required if method is called to redirect to
-            payment gateway authorize window)
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            examples:
-              example-1:
-                value:
-                  code: ''
-                  paymentGateway: Square
-        description: ''
 components:
   schemas: {}
   securitySchemes:
