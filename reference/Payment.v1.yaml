@@ -206,14 +206,58 @@ paths:
                   ApplicationToken: 7b0c2c08-5008-42b9-adf8-b9c4b0609a6c
         description: Json list of customers
     parameters: []
+  /SetKeys:
+    get:
+      summary: Set Keys
+      tags:
+        - Set Keys
+      responses: {}
+      operationId: get-SetKeys
+      description: This method is used to set the keys of payment gateways in the api. Set the keys before every call of any method.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: No response
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: SquareAccessToken
+        - schema:
+            type: string
+          in: query
+          name: SquareClientID
+        - schema:
+            type: string
+          in: query
+          name: SquareClientSecret
+        - schema:
+            type: string
+          in: query
+          name: SumupClientID
+        - schema:
+            type: string
+          in: query
+          name: SumupClientSecret
+        - schema:
+            type: string
+          in: query
+          name: BraintreeMerchantId
+        - schema:
+            type: string
+          in: query
+          name: BraintreePublicKey
+        - schema:
+            type: string
+          in: query
+          name: BraintreePrivateKey
+        - schema:
+            type: string
+          in: query
+          name: BraintreeTokenizationKey
 components:
   schemas: {}
-  securitySchemes:
-    MerchantToken:
-      name: MerchantToken
-      type: apiKey
-      in: query
-    ApplicationToken:
-      name: ApplicationToken
-      type: apiKey
-      in: query
+  securitySchemes: {}
