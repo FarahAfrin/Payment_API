@@ -145,7 +145,7 @@ paths:
                   sortOrder: null
                   MerchantToken: string
                   ApplicationToken: string
-        description: Json list of customers
+        description: Json list of customers .
     parameters: []
   /SetKeys:
     post:
