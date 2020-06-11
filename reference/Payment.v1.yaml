@@ -132,9 +132,19 @@ paths:
           description: OK
         '201':
           description: Created
-      description: ''
+      description: |-
+        List all the saved customers
+        Http Method : POST
+        Uri : http://PaymentAPIsURL/Payment/ListCustomers
+        REQUEST BODY SCHEMA: APPLICATION/JSON
       tags:
         - Customer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
     parameters:
       - schema:
           type: string
