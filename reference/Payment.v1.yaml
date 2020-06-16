@@ -820,7 +820,7 @@ paths:
                   ApplicationToken: ApplicationToken
   '/GetAllMerchants/{paymentGateway}':
     post:
-      summary: ''
+      summary: Get All Merchants
       operationId: GetAllMerchants
       responses:
         '200':
@@ -865,6 +865,8 @@ paths:
                   merchantId: merchantId
                   MerchantToken: MerchantToken
                   ApplicationToken: ApplicationToken
+      tags:
+        - Merchants
     parameters:
       - schema:
           type: string
