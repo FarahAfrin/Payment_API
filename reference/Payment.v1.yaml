@@ -848,6 +848,7 @@ paths:
                     language_code: en-CA
                     currency: CAD
                     status: ACTIVE
+          description: Json list containing details of all merchants
       description: Get All Merchants.
       parameters:
         - schema:
