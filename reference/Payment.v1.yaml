@@ -654,6 +654,64 @@ paths:
                   MerchantToken: MerchantToken
                   ApplicationToken: ApplicationToken
         description: "               \n"
+  /DeleteCustomer:
+    post:
+      summary: Delete Customer
+      operationId: post-DeleteCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    errors: null
+      description: Delete saved customer
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: |-
+            Name of payment gateway (i.e Square,
+            Braintree)
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: customerId
+          description: |-
+            Unique CustomerID from payment
+            gateway
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: MerchantToken
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: ApplicationToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  paymentGateway: paymentGateway
+                  customerId: customerId
+                  MerchantToken: MerchantToken
+                  ApplicationToken: ApplicationToken
+      tags:
+        - Customers
 components:
   schemas: {}
   securitySchemes:
