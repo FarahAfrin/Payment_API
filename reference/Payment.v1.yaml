@@ -818,6 +818,62 @@ paths:
                   Description: Description
                   MerchantToken: MerchantToken
                   ApplicationToken: ApplicationToken
+  '/GetAllMerchants/{paymentGateway}':
+    post:
+      summary: ''
+      operationId: GetAllMerchants
+      responses:
+        '200':
+          description: OK
+        '':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    id: X8APPS177BVHY
+                    business_name: NewTestAcc
+                    country: CA
+                    language_code: en-CA
+                    currency: CAD
+                    status: ACTIVE
+      description: Get All Merchants.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: MerchantToken
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: ApplicationToken
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  paymentGateway: paymentGateway
+                  merchantId: merchantId
+                  MerchantToken: MerchantToken
+                  ApplicationToken: ApplicationToken
+    parameters:
+      - schema:
+          type: string
+        name: paymentGateway
+        in: path
+        required: true
+        description: |-
+          Name of payment gateway (i.e Square,
+          Braintree)
 components:
   schemas: {}
   securitySchemes:
