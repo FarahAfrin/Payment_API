@@ -712,6 +712,93 @@ paths:
                   ApplicationToken: ApplicationToken
       tags:
         - Customers
+  /CreateLocation:
+    post:
+      summary: Create Location
+      operationId: CreateLocation
+      responses:
+        '200':
+          description: OK
+        '':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    paymentGateway: paymentGateway
+                    AddressLine1: AddressLine1
+                    AddressLine2: AddressLine2
+                    AdministrativeDistrictLevel1: AdministrativeDistrictLevel1
+                    Locality: Locality
+                    Sublocality: Sublocality
+                    PostalCode: PostalCode
+                    LocationName: LocationName
+                    Description: Description
+                    MerchantToken: MerchantToken
+                    ApplicationToken: ApplicationToken
+      description: Create a location.
+      tags:
+        - Locations
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: Name of payment gateway (i.e Square)
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: AddressLine1
+          required: true
+          description: Address
+        - schema:
+            type: string
+          in: query
+          description: Address
+          required: true
+          name: AddressLine2
+        - schema:
+            type: string
+          in: query
+          name: AdministrativeDistrictLevel1
+          description: |-
+            Two letter state code formatted according to
+            ISO3166-1 alpha-2.
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: Locality
+          description: Locality name
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: Sublocality
+          description: Locality name
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: PostalCode
+          description: Postal Code
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: LocationName
+          required: true
+          description: Name of the location
+        - schema:
+            type: string
+          in: query
+          name: Description
+          description: Any description for location
 components:
   schemas: {}
   securitySchemes:
