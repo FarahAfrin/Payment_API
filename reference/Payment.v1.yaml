@@ -840,6 +840,14 @@ paths:
                     language_code: en-CA
                     currency: CAD
                     status: ACTIVE
+                example-2:
+                  value:
+                    id: X8APPS177BVHY
+                    business_name: NewTestAcc
+                    country: CA
+                    language_code: en-CA
+                    currency: CAD
+                    status: ACTIVE
       description: Get All Merchants.
       parameters:
         - schema:
