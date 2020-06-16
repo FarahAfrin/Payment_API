@@ -726,20 +726,7 @@ paths:
               schema:
                 type: object
                 properties: {}
-              examples:
-                example-1:
-                  value:
-                    paymentGateway: paymentGateway
-                    AddressLine1: AddressLine1
-                    AddressLine2: AddressLine2
-                    AdministrativeDistrictLevel1: AdministrativeDistrictLevel1
-                    Locality: Locality
-                    Sublocality: Sublocality
-                    PostalCode: PostalCode
-                    LocationName: LocationName
-                    Description: Description
-                    MerchantToken: MerchantToken
-                    ApplicationToken: ApplicationToken
+              examples: {}
       description: Create a location.
       tags:
         - Locations
@@ -799,6 +786,26 @@ paths:
           in: query
           name: Description
           description: Any description for location
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  paymentGateway: paymentGateway
+                  AddressLine1: AddressLine1
+                  AddressLine2: AddressLine2
+                  AdministrativeDistrictLevel1: AdministrativeDistrictLevel1
+                  Locality: Locality
+                  Sublocality: Sublocality
+                  PostalCode: PostalCode
+                  LocationName: LocationName
+                  Description: Description
+                  MerchantToken: MerchantToken
+                  ApplicationToken: ApplicationToken
 components:
   schemas: {}
   securitySchemes:
