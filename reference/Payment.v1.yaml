@@ -619,10 +619,12 @@ paths:
             type: string
           in: query
           name: MerchantToken
+          required: true
         - schema:
             type: string
           in: query
           name: ApplicationToken
+          required: true
       requestBody:
         content:
           application/json:
@@ -790,10 +792,12 @@ paths:
             type: string
           in: query
           name: MerchantToken
+          required: true
         - schema:
             type: string
           in: query
           name: ApplicationToken
+          required: true
       requestBody:
         content:
           application/json:
