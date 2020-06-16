@@ -629,7 +629,31 @@ paths:
             schema:
               type: object
               properties: {}
-        description: "                {  \"paymentGateway\": “paymentGateway”,\n                    \"CreatedEndsAt\": “CreatedEndsAt”,\n                    \"CreatedStartAt\": “CreatedStartAt”,\n                    \"UpdatedEndsAt\": “UpdatedEndsAt”,\n                    \"UpdatedStartAt\": “UpdatedStartAt”,\n                    \"Order\": “Order”,\n                    \"cursor\": “cursor”,\n                    \"limit\": “limit.ToString()”,\n                    \"CompanyName\": “CompanyName”,\n                    \"Email\": “Email”,\n                    \"Fax\": “Fax”,\n                    \"FirstName\": “FirstName”,\n                    \"Id\": “Id”,\n                    \"LastName\": “LastName”,\n                    \"Website\": “Website”,\n                    \"CountryName\": “CountryName”,\n                    \"CardholderName\": “CardholderName”,\n                    \"CreditCardExpirationDate\": “CreditCardExpirationDate”,\n                    \"CreditCardNumber\": “CreditCardNumber”,\n                    \"MerchantToken\": “MerchantToken”,\n                    \"ApplicationToken\": “ApplicationToken”\n}\n"
+            examples:
+              example-1:
+                value:
+                  paymentGateway: paymentGateway
+                  CreatedEndsAt: CreatedEndsAt
+                  CreatedStartAt: CreatedStartAt
+                  UpdatedEndsAt: UpdatedEndsAt
+                  UpdatedStartAt: UpdatedStartAt
+                  Order: Order
+                  cursor: cursor
+                  limit: limit.ToString()
+                  CompanyName: CompanyName
+                  Email: Email
+                  Fax: Fax
+                  FirstName: FirstName
+                  Id: Id
+                  LastName: LastName
+                  Website: Website
+                  CountryName: CountryName
+                  CardholderName: CardholderName
+                  CreditCardExpirationDate: CreditCardExpirationDate
+                  CreditCardNumber: CreditCardNumber
+                  MerchantToken: MerchantToken
+                  ApplicationToken: ApplicationToken
+        description: "               \n"
 components:
   schemas: {}
   securitySchemes:
