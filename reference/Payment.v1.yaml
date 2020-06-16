@@ -386,6 +386,250 @@ paths:
                   Website: www.test.com
                   MerchantToken: MerchantToken
                   ApplicationToken: ApplicationToken
+  /SearchCustomers:
+    post:
+      summary: Search Customers
+      operationId: post-SearchCustomers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    errors: null
+                    customers:
+                      - id: KFKFRBVVN0ZB56Q90BGZ8DESJW
+                        created_at: '2020-06-07T12:47:49.926Z'
+                        updated_at: '2020-06-07T12:47:50Z'
+                        cards:
+                          - id: 'ccof:WZngFGfUsqNtg6Zj4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 2
+                            exp_year: 2023
+                            cardholder_name: farah
+                            billing_address:
+                              address_line_1: '825 Eighth Avenue, New York'
+                              address_line_2: '1860 McOrmond drive '
+                              address_line_3: null
+                              locality: ontario
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: ca
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: zz
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: farah
+                        family_name: fg
+                        nickname: fa
+                        company_name: test
+                        email_address: apitest@hidata.com
+                        address:
+                          address_line_1: '1860 McOrmond drive '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: Manhattan
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: S7S 0A5
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: f123
+                        note: test
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: X8APPS177BVHY.CARDS_ON_FILE
+                            name: Cards on file
+                        creation_source: third_party
+                      - id: 3386qc83kgy1fdydrrwtvdndvm
+                        created_at: '2020-06-11t12:58:59.763z'
+                        updated_at: '2020-06-11t12:59:00z'
+                        cards: null
+                        given_name: farahvb
+                        family_name: ad
+                        nickname: af
+                        company_name: test
+                        email_address: apitest@hidata.com
+                        address:
+                          address_line_1: '825 Eighth Avenue, New York'
+                          address_line_2: null
+                          address_line_3: null
+                          locality: ontario
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: CA
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: S7S 0A5
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: cv11
+                        note: test
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                    cursor: null
+      description: Search saved customers.
+      tags:
+        - Customers
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: paymentGateway
+          description: |-
+            Name of payment gateway (i.e
+            Square, Braintree)
+        - schema:
+            type: string
+          in: query
+          name: CreatedEndsAt
+          description: |-
+            A datetime value in RFC-3339 format
+            indicating when the time range ends
+        - schema:
+            type: string
+          in: query
+          name: CreatedStartAt
+          description: |-
+            A datetime value in RFC-3339 format
+            indicating when the time range starts
+        - schema:
+            type: string
+          in: query
+          name: UpdatedEndsAt
+          description: |-
+            A datetime value in RFC-3339 format
+            indicating when the time range ends
+        - schema:
+            type: string
+          in: query
+          name: UpdatedStartAt
+          description: |-
+            A datetime value in RFC-3339 format
+            indicating when the time range starts
+        - schema:
+            type: string
+          in: query
+          name: Order
+          description: DESC/ASC
+        - schema:
+            type: string
+          in: query
+          name: cursor
+          description: |-
+            Pagination page no. Returned by
+            payment gateway
+        - schema:
+            type: string
+          in: query
+          name: limit
+          description: |-
+            A limit on the number of results to be
+            returned in a single page
+        - schema:
+            type: string
+          in: query
+          name: CompanyName
+          description: The customer’s company
+        - schema:
+            type: string
+          in: query
+          name: Email
+          description: "The customer's email"
+        - schema:
+            type: string
+          in: query
+          name: Fax
+          description: "The customer's fax number"
+        - schema:
+            type: string
+          in: query
+          name: FirstName
+          description: "The customer's first name"
+        - schema:
+            type: string
+          in: query
+          name: Id
+          description: Unique CustomerID
+        - schema:
+            type: string
+          in: query
+          name: LastName
+          description: "The customer's last name"
+        - schema:
+            type: string
+          in: query
+          name: Website
+          description: "The customer's website"
+        - schema:
+            type: string
+          in: query
+          name: CountryName
+          description: The customer’s country
+        - schema:
+            type: string
+          in: query
+          name: CardholderName
+          description: |-
+            The name on a credit card associated
+            with the customer
+        - schema:
+            type: string
+          in: query
+          name: CreditCardExpirationDate
+          description: |-
+            The expiration date of a credit card
+            associated with the customer
+        - schema:
+            type: string
+          in: query
+          name: CreditCardNumber
+          description: |-
+            The number of a credit card
+            associated with the customer
+        - schema:
+            type: string
+          in: query
+          name: MerchantToken
+        - schema:
+            type: string
+          in: query
+          name: ApplicationToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: "                {  \"paymentGateway\": “paymentGateway”,\n                    \"CreatedEndsAt\": “CreatedEndsAt”,\n                    \"CreatedStartAt\": “CreatedStartAt”,\n                    \"UpdatedEndsAt\": “UpdatedEndsAt”,\n                    \"UpdatedStartAt\": “UpdatedStartAt”,\n                    \"Order\": “Order”,\n                    \"cursor\": “cursor”,\n                    \"limit\": “limit.ToString()”,\n                    \"CompanyName\": “CompanyName”,\n                    \"Email\": “Email”,\n                    \"Fax\": “Fax”,\n                    \"FirstName\": “FirstName”,\n                    \"Id\": “Id”,\n                    \"LastName\": “LastName”,\n                    \"Website\": “Website”,\n                    \"CountryName\": “CountryName”,\n                    \"CardholderName\": “CardholderName”,\n                    \"CreditCardExpirationDate\": “CreditCardExpirationDate”,\n                    \"CreditCardNumber\": “CreditCardNumber”,\n                    \"MerchantToken\": “MerchantToken”,\n                    \"ApplicationToken\": “ApplicationToken”\n}\n"
 components:
   schemas: {}
   securitySchemes:
