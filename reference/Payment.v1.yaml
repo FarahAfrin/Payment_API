@@ -27456,6 +27456,206 @@ paths:
                       mcc: '7299'
       tags:
         - Test
+  /CreatePaymentBraintree:
+    post:
+      summary: Create payment Braintree
+      operationId: post-CreatePaymentBraintree
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    Id: 9cxs3pxv
+                    AddOns: []
+                    Amount: 2
+                    AvsErrorResponseCode: null
+                    AvsPostalCodeResponseCode: M
+                    AvsStreetAddressResponseCode: I
+                    BillingAddress:
+                      Id: null
+                      CustomerId: null
+                      FirstName: null
+                      LastName: null
+                      Company: null
+                      StreetAddress: null
+                      ExtendedAddress: null
+                      Locality: null
+                      Region: null
+                      PostalCode: '94103'
+                      CountryCodeAlpha2: null
+                      CountryCodeAlpha3: null
+                      CountryCodeNumeric: null
+                      CountryName: null
+                      CreatedAt: null
+                      UpdatedAt: null
+                    Channel: null
+                    CreatedAt: '2020-06-17T12:33:50Z'
+                    CreditCard:
+                      Bin: '411111'
+                      CardholderName: null
+                      CardType: {}
+                      CreatedAt: null
+                      CustomerId: null
+                      IsDefault: null
+                      IsVenmoSdk: false
+                      IsExpired: null
+                      CustomerLocation: {}
+                      LastFour: '1111'
+                      UniqueNumberIdentifier: null
+                      Subscriptions: []
+                      Token: null
+                      UpdatedAt: null
+                      BillingAddress:
+                        Id: null
+                        CustomerId: null
+                        FirstName: null
+                        LastName: null
+                        Company: null
+                        StreetAddress: null
+                        ExtendedAddress: null
+                        Locality: null
+                        Region: null
+                        PostalCode: null
+                        CountryCodeAlpha2: null
+                        CountryCodeAlpha3: null
+                        CountryCodeNumeric: null
+                        CountryName: null
+                        CreatedAt: null
+                        UpdatedAt: null
+                      ExpirationMonth: '10'
+                      ExpirationYear: '2025'
+                      Prepaid: {}
+                      Payroll: {}
+                      Debit: {}
+                      Commercial: {}
+                      Healthcare: {}
+                      DurbinRegulated: {}
+                      ImageUrl: 'https://assets.braintreegateway.com/payment_method_logo/visa.png?environment=sandbox'
+                      Verification: null
+                      AccountType: null
+                      CountryOfIssuance: Unknown
+                      IssuingBank: Unknown
+                      ProductId: Unknown
+                      ExpirationDate: 10/2025
+                      MaskedNumber: '411111******1111'
+                    CurrencyIsoCode: CAD
+                    CustomerDetails:
+                      Id: null
+                      FirstName: null
+                      LastName: null
+                      Company: null
+                      Email: null
+                      Phone: null
+                      Fax: null
+                      Website: null
+                    CvvResponseCode: M
+                    Descriptor:
+                      Name: null
+                      Phone: null
+                      Url: null
+                    Discounts: []
+                    Disputes: []
+                    GatewayRejectionReason: {}
+                    GraphQLId: dHJhbnNhY3Rpb25fOWN4czNweHY
+                    MerchantAccountId: bitbuffstechnologiespvtltd
+                    OrderId: null
+                    PlanId: null
+                    ProcessorAuthorizationCode: 0K9PC2
+                    ProcessorResponseType: {}
+                    ProcessorResponseCode: '1000'
+                    ProcessorResponseText: Approved
+                    ProcessorSettlementResponseCode: null
+                    ProcessorSettlementResponseText: null
+                    AdditionalProcessorResponse: null
+                    NetworkResponseCode: null
+                    NetworkResponseText: null
+                    VoiceReferralNumber: null
+                    PurchaseOrderNumber: null
+                    Recurring: false
+                    RefundedTransactionId: null
+                    RefundIds: []
+                    PartialSettlementTransactionIds: []
+                    AuthorizedTransactionId: null
+                    SettlementBatchId: null
+                    ShippingAddress:
+                      Id: null
+                      CustomerId: null
+                      FirstName: null
+                      LastName: null
+                      Company: null
+                      StreetAddress: null
+                      ExtendedAddress: null
+                      Locality: null
+                      Region: null
+                      PostalCode: null
+                      CountryCodeAlpha2: null
+                      CountryCodeAlpha3: null
+                      CountryCodeNumeric: null
+                      CountryName: null
+                      CreatedAt: null
+                      UpdatedAt: null
+                    EscrowStatus: {}
+                    Status: {}
+                    StatusHistory:
+                      - Amount: 2
+                        Status: {}
+                        Timestamp: '2020-06-17T12:33:50Z'
+                        Source: {}
+                        User: priyankaguliahidata
+                      - Amount: 2
+                        Status: {}
+                        Timestamp: '2020-06-17T12:33:50Z'
+                        Source: {}
+                        User: priyankaguliahidata
+                    AuthorizationAdjustments: []
+                    SubscriptionId: null
+                    SubscriptionDetails:
+                      BillingPeriodEndDate: null
+                      BillingPeriodStartDate: null
+                    TaxAmount: null
+                    TaxExempt: false
+                    Type: {}
+                    UpdatedAt: '2020-06-17T12:33:50Z'
+                    CustomFields: {}
+                    ServiceFeeAmount: null
+                    DisbursementDetails:
+                      SettlementAmount: null
+                      SettlementCurrencyIsoCode: null
+                      SettlementCurrencyExchangeRate: null
+                      FundsHeld: null
+                      Success: null
+                      DisbursementDate: null
+                    ApplePayDetails: null
+                    AndroidPayDetails: null
+                    AmexExpressCheckoutDetails: null
+                    PayPalDetails: null
+                    PayPalHereDetails: null
+                    LocalPaymentDetails: null
+                    CoinbaseDetails: null
+                    VenmoAccountDetails: null
+                    UsBankAccountDetails: null
+                    IdealPaymentDetails: null
+                    VisaCheckoutCardDetails: null
+                    MasterpassCardDetails: null
+                    SamsungPayCardDetails: null
+                    PaymentInstrumentType: {}
+                    RiskData: null
+                    ThreeDSecureInfo: null
+                    FacilitatedDetails: null
+                    FacilitatorDetails: null
+                    DiscountAmount: null
+                    ShippingAmount: null
+                    ShipsFromPostalCode: null
+                    NetworkTransactionId: '020200617123350'
+                    AuthorizationExpiresAt: '2020-06-24T12:33:50Z'
+      tags:
+        - Test
 components:
   schemas: {}
   securitySchemes:
