@@ -885,9 +885,9 @@ paths:
         description: |-
           Name of payment gateway (i.e Square,
           Braintree)
-  /testListCustomerSquare:
+  /testListCusomerBraintree:
     post:
-      summary: testListCustomerSquare
+      summary: testListCustomerBraintree
       operationId: post-test
       responses:
         '200':
@@ -24255,6 +24255,1102 @@ paths:
                         ExpirationDate: 10/2025
                         MaskedNumber: '411111******1111'
                 example-2: {}
+      tags:
+        - Test
+    parameters: []
+  /testListCustomerSquare:
+    post:
+      summary: ListCustomerSquare
+      operationId: post-testListCustomer
+      responses:
+        '200':
+          description: OK
+        '':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    errors: null
+                    customers:
+                      - id: 02M3SNMQNGZ0X5PDW1J7HGTRSM
+                        created_at: '2020-03-25T05:54:10.726Z'
+                        updated_at: '2020-03-25T05:54:11Z'
+                        cards:
+                          - id: 'ccof:MCQ1F9Zk1KgtdCQy3GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 10
+                            exp_year: 2023
+                            cardholder_name: Ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: 4 roman knoll
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '21030'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '284'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: EKP14RZF3RYJ3B3JN3FQE0J6SM
+                        created_at: '2020-03-12T14:11:32.399Z'
+                        updated_at: '2020-03-12T14:11:32Z'
+                        cards: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: bitbuffs
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: test
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '251'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                      - id: F24NQG5K8RW5N2CY1825TY0C3R
+                        created_at: '2020-02-27T11:53:08.315Z'
+                        updated_at: '2020-02-27T11:53:08Z'
+                        cards: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: Bitbuffs
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: 'dgdffd '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '171'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                      - id: Q10B4WG6Y8RBV51368JZWRYK10
+                        created_at: '2020-03-27T16:26:02.804Z'
+                        updated_at: '2020-03-27T16:26:03Z'
+                        cards:
+                          - id: 'ccof:YmVO8R3FDxiRWiCY3GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                          - id: 'ccof:irT77rjs8Qq2Ub513GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2025
+                            cardholder_name: Priyanka
+                            billing_address:
+                              address_line_1: Test
+                              address_line_2: Test
+                              address_line_3: null
+                              locality: Test
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: SK
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: bitbuffs
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: dadf
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '12345'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '322'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: TJJQ22EDNRTKD8QN4YG89GGZW8
+                        created_at: '2020-02-28T11:44:45.071Z'
+                        updated_at: '2020-02-28T11:44:45Z'
+                        cards: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: Bitbuffs
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: 'fadfd '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '180'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                      - id: 1NTVJRNRAWSDF4FH97SJS0PGGG
+                        created_at: '2020-04-15T16:24:57.544Z'
+                        updated_at: '2020-04-15T16:24:58Z'
+                        cards:
+                          - id: 'ccof:EcnXc7yFVdCzOvGZ3GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 10
+                            exp_year: 2023
+                            cardholder_name: Ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: bitbuffs local
+                        email_address: durve.ashish@gmail.com
+                        address:
+                          address_line_1: '301 sakar compex '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '390009'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '367'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: NAMJQ0AW38VXDFDWTZ20A8F13R
+                        created_at: '2020-03-27T08:17:37.396Z'
+                        updated_at: '2020-03-27T08:17:37Z'
+                        cards:
+                          - id: 'ccof:G1PpC7MVxrc6oVu63GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs tech
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: test
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '21030'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '318'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: 8CQHSM000WV49A7TE72A7W1S1G
+                        created_at: '2020-05-01T12:32:29.643Z'
+                        updated_at: '2020-05-01T12:32:30Z'
+                        cards: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: Bitbuffs Technologies
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: '74 Charles Street  '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07307'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '425'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                      - id: 00YA31P39GYY57315WAB0D64GM
+                        created_at: '2020-05-01T12:35:13.501Z'
+                        updated_at: '2020-05-01T12:35:14Z'
+                        cards:
+                          - id: 'ccof:6LFzVvPvRvvOAXpw4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs Technologies
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: '4 Broadway  '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '426'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: 0247AZ1544TESAVS6H070CB91G
+                        created_at: '2020-05-15T06:49:40.483Z'
+                        updated_at: '2020-05-15T06:49:40Z'
+                        cards:
+                          - id: 'ccof:EMRkGHuIMcBNrYjS4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: Ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs Technologies
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: '4 Broadway  '
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '426'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: 3CHA85MQ50ZNH1B6P2CZ94NY1C
+                        created_at: '2020-06-16T08:36:08.365Z'
+                        updated_at: '2020-06-16T08:36:08Z'
+                        cards:
+                          - id: 'ccof:cW0klnqKAm2W1SXG4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 10
+                            exp_year: 2023
+                            cardholder_name: Ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs Technologies
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: 4 Roman Knoll Court
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '94103'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '24'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: AXRDZZXTNMWJ3ACV1K4A5JQR3M
+                        created_at: '2020-06-16T06:49:53.708Z'
+                        updated_at: '2020-06-16T06:49:54Z'
+                        cards:
+                          - id: 'ccof:cE7WWH94s2KYVAZh4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 3
+                            exp_year: 2023
+                            cardholder_name: Ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: Bitbuffs Technologies
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: 74 Charles Street
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '94103'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '585'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: 6EYCNZ5AZ4RN78TX70R7MGKS4R
+                        created_at: '2020-02-28T14:24:42.369Z'
+                        updated_at: '2020-02-28T14:24:42Z'
+                        cards:
+                          - id: 'ccof:Ctiuz5MaG9BIYSm63GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: demo
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: test
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '184'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: WS11Y9TGE4Y6Q6B1QCV95XPGW8
+                        created_at: '2020-05-28T16:14:47.966Z'
+                        updated_at: '2020-05-28T16:14:48Z'
+                        cards:
+                          - id: 'ccof:arfiumyV1ldp4jl53GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 10
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: HI DATA
+                        email_address: ashish.durve@gmail.com
+                        address:
+                          address_line_1: 4 Roman Knoll Court
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '94103'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '550'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: A359ERJ1GCT8504239GTEQTZWG
+                        created_at: '2020-02-28T13:56:47.895Z'
+                        updated_at: '2020-02-28T13:56:48Z'
+                        cards:
+                          - id: 'ccof:SFEtum4oRMj91Wgv3GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: ashish durve
+                        family_name: durve
+                        nickname: ashish
+                        company_name: test 12
+                        email_address: ashish.durve@bitbuffs.com
+                        address:
+                          address_line_1: fdf fd
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '07306'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '182'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: WE6C29EN98ZKQ83951P3ZN16W4
+                        created_at: '2020-05-26T14:56:29.036Z'
+                        updated_at: '2020-05-26T14:56:29Z'
+                        cards:
+                          - id: 'ccof:OJ5im3O0Y8G1MRbh4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2023
+                            cardholder_name: ashish Durve
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Ashish Durve
+                        family_name: Durve
+                        nickname: Ashish
+                        company_name: test company
+                        email_address: ashish.durve@gmail.com
+                        address:
+                          address_line_1: 4 Roman Knoll Court
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '94103'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '534'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: ZVJ0W46064RVS18H254F2QCY3M
+                        created_at: '2020-05-15T14:41:36.618Z'
+                        updated_at: '2020-05-15T14:41:37Z'
+                        cards:
+                          - id: 'ccof:yrzplNx2yLJIFr2G4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 2
+                            exp_year: 2025
+                            cardholder_name: Riya Agarwal
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Brain tree
+                        family_name: tree
+                        nickname: Brain
+                        company_name: Braintree Businss
+                        email_address: braintreetest@user.com
+                        address:
+                          address_line_1: '  Vadodara Central Mall Alkapuri'
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '390023'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '491'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: D0FE51M5S0Z17B1V048T8WGQ40
+                        created_at: '2020-05-19T04:45:13.414Z'
+                        updated_at: '2020-05-19T04:45:13Z'
+                        cards:
+                          - id: 'ccof:CTFg49CaQNqqKi4t4GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 2
+                            exp_year: 2025
+                            cardholder_name: Riya Agarwal
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Braintree Payment
+                        family_name: Payment
+                        nickname: Braintree
+                        company_name: Braintree
+                        email_address: braintree@user.com
+                        address:
+                          address_line_1: '  Vadodara Central Mall Alkapuri'
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '390023'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '476'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                      - id: N0QSH0BQ7RTY912MQM7QZXRDWC
+                        created_at: '2020-03-09T12:34:28.028Z'
+                        updated_at: '2020-03-09T12:34:28Z'
+                        cards: null
+                        given_name: Charbe; ishak
+                        family_name: ishak
+                        nickname: Charbe;
+                        company_name: Test
+                        email_address: charbel@hidata.com
+                        address:
+                          address_line_1: 'Level 1, 240 Waterworks Road'
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '4060'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '161'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups: null
+                        creation_source: THIRD_PARTY
+                      - id: MZK0E2KXG8XK76X2W0H7E4NP9M
+                        created_at: '2020-03-14T19:58:36.486Z'
+                        updated_at: '2020-03-14T19:58:36Z'
+                        cards:
+                          - id: 'ccof:wu30II8Qu2Uflhbo3GB'
+                            card_brand: VISA
+                            last_4: '1111'
+                            exp_month: 12
+                            exp_year: 2022
+                            cardholder_name: Charbel
+                            billing_address:
+                              address_line_1: 500 Electric Ave
+                              address_line_2: Suite 600
+                              address_line_3: null
+                              locality: New York
+                              sublocality: null
+                              sublocality_2: null
+                              sublocality_3: null
+                              administrative_district_level_1: NY
+                              administrative_district_level_2: null
+                              administrative_district_level_3: null
+                              postal_code: '94103'
+                              country: ZZ
+                              first_name: null
+                              last_name: null
+                              organization: null
+                            fingerprint: null
+                            bin: null
+                        given_name: Charbel Ishak
+                        family_name: Ishak
+                        nickname: Charbel
+                        company_name: Digi-Purse
+                        email_address: ishak.charbel@gmail.com
+                        address:
+                          address_line_1: 644 Lakeshore Rd E
+                          address_line_2: null
+                          address_line_3: null
+                          locality: La Ronge
+                          sublocality: null
+                          sublocality_2: null
+                          sublocality_3: null
+                          administrative_district_level_1: SK
+                          administrative_district_level_2: null
+                          administrative_district_level_3: null
+                          postal_code: '111111'
+                          country: null
+                          first_name: null
+                          last_name: null
+                          organization: null
+                        phone_number: null
+                        birthday: null
+                        reference_id: '256'
+                        note: null
+                        preferences:
+                          email_unsubscribed: false
+                        groups:
+                          - id: QXS7W1S39JFJW.CARDS_ON_FILE
+                            name: Cards on File
+                        creation_source: THIRD_PARTY
+                    cursor: Cg1RWFM3VzFTMzlKRkpXGgAiqwQSqARyTzBBQlhOeUFEbGpiMjB1YzNGMVlYSmxkWEF1Y205c2IyUmxlR1JwYzJOdmRtVnllUzV0YjJSbGJITXVRWFYwYjFaaGJIVmxYMUJoWjJsdVlYUnBiMjZBcXYxbFBVTWUwd0lBQkV3QUJtTjFjbk52Y25RQUVreHFZWFpoTDJ4aGJtY3ZVM1J5YVc1bk8wd0FCbTltWm5ObGRIUUFFMHhxWVhaaEwyeGhibWN2U1c1MFpXZGxjanRNQUFSemFYcGxjUUIrQUFKTUFBVjBiM1JoYkhRQUVFeHFZWFpoTDJ4aGJtY3ZURzl1Wnp0NGNnQXZZMjl0TG5OeGRXRnlaWFZ3TG5KdmJHOWtaWGhrYVhOamIzWmxjbmt1Ylc5a1pXeHpMbEJoWjJsdVlYUnBiMjRTakdDaThjOXBWZ0lBQUhod2RBQWtORFJqWVdGaVl6Y3RNV1U1TlMwME1URmtMVGd3TTJVdE5XRTBaV1ZoWlRjNFpHSmhjM0lBRVdwaGRtRXViR0Z1Wnk1SmJuUmxaMlZ5RXVLZ3BQZUJoemdDQUFGSkFBVjJZV3gxWlhoeUFCQnFZWFpoTG14aGJtY3VUblZ0WW1WeWhxeVZIUXVVNElzQ0FBQjRjQUFBQUJSeEFINEFDWE55QUE1cVlYWmhMbXhoYm1jdVRHOXVaenVMNUpETWp5UGZBZ0FCU2dBRmRtRnNkV1Y0Y1FCK0FBZ0FBQUFBQUFBQk9BPT0qBAgBEAE=
       tags:
         - Test
     parameters: []
