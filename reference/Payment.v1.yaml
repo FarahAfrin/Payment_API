@@ -885,9 +885,9 @@ paths:
         description: |-
           Name of payment gateway (i.e Square,
           Braintree)
-  /testListCusomerBraintree:
+  /ListCusomerBraintree:
     post:
-      summary: testListCustomerBraintree
+      summary: ListCustomerBraintree
       operationId: post-test
       responses:
         '200':
